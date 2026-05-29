@@ -37,19 +37,6 @@ Legal and compliance workflows are risky places to rely on fluent text alone. A 
 - parse model outputs into stable verdict classes,
 - compare model answers against the solver rather than against vibes.
 
-## Pipeline View
-
-```mermaid
-flowchart LR
-    A[Legal rule logic] --> B[SMT constraints]
-    B --> C[Solver verdicts]
-    C --> D[Preference-style examples]
-    D --> E[LoRA adapters]
-    E --> F[Generated answers]
-    F --> G[Verdict parser]
-    G --> H[Solver-aligned error analysis]
-```
-
 ## My Contribution
 
 I built the project pipeline end to end for the course deliverable:
