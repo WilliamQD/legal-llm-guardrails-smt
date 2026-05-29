@@ -1,0 +1,32 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Private/local project material
+data/*.json
+data/*.csv
+data/*.jsonl
+data/*.xlsx
+results/raw_generations/
+results/*.json
+outputs/
+checkpoints/
+adapters/
+models/
+
+# Large/generated artifacts
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
