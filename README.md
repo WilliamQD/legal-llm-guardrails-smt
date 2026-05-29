@@ -2,7 +2,24 @@
 
 SMT-checked evaluation pipeline for testing whether LoRA-adapted language models follow rule-based legal dependency logic.
 
-This portfolio repo is a curated, no-data version of a course final project. It is designed to show the engineering and evaluation approach without publishing private course materials, instructor-provided cases, raw model outputs, or training/evaluation datasets.
+![Python](https://img.shields.io/badge/Python-evaluation-blue)
+![SMT](https://img.shields.io/badge/SMT-rule_checking-purple)
+![LoRA](https://img.shields.io/badge/LoRA-adapter_eval-orange)
+![Public safe](https://img.shields.io/badge/Public--safe-no_data-green)
+
+Project context: Yale course final project | CPSC 4151 | Curated public showcase
+
+This portfolio repo is a curated, no-data version of the final project. It is designed to show the engineering and evaluation approach without publishing private course materials, instructor-provided cases, raw model outputs, or training/evaluation datasets.
+
+## At a Glance
+
+<table>
+  <tr>
+    <td><strong>Problem</strong><br>Legal LLMs can sound confident while violating formal rule logic.</td>
+    <td><strong>Approach</strong><br>Use SMT verdicts as ground truth, then score model outputs against solver-checked labels.</td>
+    <td><strong>Signal</strong><br>More examples did not automatically improve borderline rule reasoning.</td>
+  </tr>
+</table>
 
 ## Overview
 
@@ -19,6 +36,19 @@ Legal and compliance workflows are risky places to rely on fluent text alone. A 
 - fine-tune models on structured legal examples,
 - parse model outputs into stable verdict classes,
 - compare model answers against the solver rather than against vibes.
+
+## Pipeline View
+
+```mermaid
+flowchart LR
+    A[Legal rule logic] --> B[SMT constraints]
+    B --> C[Solver verdicts]
+    C --> D[Preference-style examples]
+    D --> E[LoRA adapters]
+    E --> F[Generated answers]
+    F --> G[Verdict parser]
+    G --> H[Solver-aligned error analysis]
+```
 
 ## My Contribution
 
