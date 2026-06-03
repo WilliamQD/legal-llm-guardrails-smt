@@ -11,7 +11,7 @@ Project context: Yale course final project | CPSC 4151 | Curated public showcase
 
 This portfolio repo is a curated, no-data version of the final project. It is designed to show the engineering and evaluation approach without publishing private course materials, instructor-provided cases, raw model outputs, or training/evaluation datasets.
 
-**Read the deliverables:** [Report](REPORT.md) | [Presentation](PRESENTATION.md)
+**Read the deliverables:** [Portfolio report](REPORT.md) | [Actual report](deliverables/legal_llm_guardrails_report.md) | [Presentation summary](PRESENTATION.md)
 
 ## At a Glance
 
@@ -76,6 +76,7 @@ The main finding was not "more data always helps." The larger adapter did not im
 ```text
 REPORT.md          # public-safe report derivative
 PRESENTATION.md    # public-safe presentation derivative
+deliverables/      # sanitized actual course report
 src/guardrail_eval/
   verdicts.py       # parse model verdicts and score against SMT labels
   schema.py         # validate private preference datasets without publishing them
